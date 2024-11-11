@@ -48,12 +48,20 @@ return [
             'root' => storage_path('app'),
         ],
 
+        // 'public' => [
+        //     'driver' => 'local',
+        //     'root' => storage_path('app/public'),
+        //     'url' => env('APP_URL').'/storage',
+        //     'visibility' => 'public',
+        // ],
+        
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
+            'root' => public_path('storage'),  // Cambiar a public/storage
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
+        
         'core' => [
             'driver' => 'local',
             'root' => app_path('CoreFacturalo')
