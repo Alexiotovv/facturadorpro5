@@ -39,9 +39,6 @@ RUN docker-php-ext-install soap
 
 # RUN ln -s ../storage/app/public public/storage && \
 #RUN chown -R www-data:www-data public/storage
-
-RUN mkdir -p /var/www/public/storage
-
     
 RUN chmod -R 775 /var/www/vendor/mpdf/mpdf/tmp && \
     chown -R www-data:www-data /var/www/vendor/mpdf/mpdf/tmp && \
@@ -54,8 +51,8 @@ COPY .docker/php/php.ini /usr/local/etc/php/php.ini
 
     
 # Establecer permisos correctos
-RUN chown -R www-data:www-data /var/www \
-    && chmod -R 775 /var/www/storage /var/www/bootstrap/cache
+RUN chown -R www-data:www-data /var/www && \
+    chmod -R 775 /var/www/storage /var/www/bootstrap/cache
 
 
 # Exponer el puerto 9000 y ejecutar PHP-FPM
