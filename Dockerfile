@@ -36,7 +36,7 @@ RUN docker-php-ext-install soap
 #chown -R www-data:www-data /var/www/public/storage
 
 RUN ln -s ../storage/app/public public/storage && \
-RUN chown -R www-data:www-data public/storage
+    chown -R www-data:www-data public/storage
     
 # Configura permisos para mPDF y el directorio de almacenamiento
 RUN chmod -R 775 /var/www/vendor/mpdf/mpdf/tmp && \
