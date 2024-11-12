@@ -37,11 +37,11 @@ RUN ln -s ../storage/app/public public/storage && \
     chown -R www-data:www-data public/storage
 
 # Configura permisos para mPDF y el directorio de almacenamiento con rutas relativas
-RUN chmod -R 775 vendor/mpdf/mpdf/tmp && \
-    chown -R www-data:www-data vendor/mpdf && \
-    chmod -R 775 storage/app/public && \
-    chown -R www-data:www-data storage/app/public && \
-    chmod 775 public/storage
+RUN chmod -R 775 /var/www/vendor/mpdf/mpdf/tmp && \
+    chown -R www-data:www-data /var/www/vendor/mpdf && \
+    chmod -R 775 /var/www/storage/app/public && \
+    chown -R www-data:www-data /var/www/storage/app/public && \
+    chmod 775 /var/www/public/storage
 
 # Copiar el archivo de configuración de PHP
 COPY .docker/php/php.ini /usr/local/etc/php/php.ini
