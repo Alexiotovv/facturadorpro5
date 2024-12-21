@@ -1,5 +1,5 @@
 # Usar la imagen de PHP 7.1 con Apache
-FROM php:7.1-fpm
+FROM php:7.4-fpm
 
 # Instalar dependencias del sistema
 RUN apt-get update && apt-get install -y \
