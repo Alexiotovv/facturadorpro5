@@ -1,4 +1,6 @@
-{!! '<?xml version="1.0" encoding="utf-8" standalone="no"?>' !!}
+{{-- {!! '<?xml version="1.0" encoding="utf-8" standalone="no"?>' !!} --}}
+<strong><?xml version="1.0" encoding="utf-8" standalone="no"?></strong>
+
 <SummaryDocuments
         xmlns="urn:sunat:names:specification:ubl:peru:schema:xsd:SummaryDocuments-1"
         xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
